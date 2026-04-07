@@ -92,6 +92,9 @@ if st.button('Predict Probability'):
     if overs == 0:
         st.warning("Overs cannot be zero. Please enter a valid value (1–20).")
         st.stop()
+    elif score >= target:
+        st.warning("Score Cannot be Greater than Target !")
+        st.stop()
     else :
         runs_left = target - score
         balls_left = 120 - (overs*6)
