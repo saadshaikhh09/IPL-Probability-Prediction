@@ -79,7 +79,13 @@ total_balls = overs_int * 6 + balls_in_over
 max_score = total_balls * 6
 
 with col3:
-    score = st.number_input('Score', step=1, format="%d", min_value=0, max_value=max_score if total_balls > 0 else 0)
+   score = st.number_input(
+    'Score',
+    step=1,
+    format="%d",
+    min_value=0,
+    max_value=min(max_score, target - 1) if total_balls > 0 and target > 0 else 0
+)
 
 if st.button('Predict Probability'):
 
