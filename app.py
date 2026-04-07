@@ -69,7 +69,7 @@ col3,col4,col5 = st.columns(3)
 with col4:
     overs = st.number_input('Overs completed', step=1, format="%d", min_value=0, max_value=20)
 with col5:
-    wickets = st.number_input('Wickets out', step=1, format="%d", max_value=10, min_value=0)
+    wickets = st.number_input('Wickets', step=1, format="%d", max_value=10, min_value=0)
 
 # Convert overs to balls (correct cricket logic)
 overs_int = int(overs)
