@@ -47,6 +47,23 @@ with col_logo:
 with col_title:
     st.title('IPL Win Predictor')
 
+st.markdown(
+    """
+    <div style="
+        background-color:#FEF3C7;
+        padding:10px;
+        border-radius:8px;
+        margin-bottom:15px;
+        font-size:14px;
+        color:#92400E;">
+        ⚠️ <b>Note:</b> This model predicts match outcomes based on historical IPL data. 
+        It may not fully reflect real-time factors such as player form, pitch conditions, 
+        or modern high-scoring trends.
+    </div>
+    """,
+    unsafe_allow_html=True
+)
+
 col1, col2 = st.columns(2)
 
 with col1:
